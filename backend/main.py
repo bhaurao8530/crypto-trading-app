@@ -30,9 +30,19 @@ def get_price(coin="bitcoin"):
         return cache[coin]["price"]
 
     url = f"https://api.coingecko.com/api/v3/simple/price?ids={coin}&vs_currencies=usd"
-    response = requests.get(url)
-    data = response.json()
-    price = data[coin]["usd"]
+
+    try:
+        response = requests.get(url)
+        data = response.json()
+
+        if coin not in data or "usd" not in data[coin]:
+            return 0  # fallback value
+
+        price = data[coin]["usd"]
+
+    except Exception as e:
+        print("API Error:", e)
+        return 0
 
     cache[coin] = {
         "price": price,
@@ -40,7 +50,6 @@ def get_price(coin="bitcoin"):
     }
 
     return price
-
 
 @app.get("/price")
 def price(coin: str = "bitcoin"):
