@@ -1,0 +1,127 @@
+
+.crypto-center-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 40%, #1a2240 60%, #0a1026 100%);
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.crypto-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 56px;
+  text-align: center;
+  margin-bottom: 48px;
+  margin-top: 0;
+  letter-spacing: -2px;
+  text-shadow: 0 4px 32px #0008;
+}
+
+.crypto-card {
+  width: 600px;
+  background: #162040;
+  border-radius: 32px;
+  box-shadow: 0 8px 48px #0006;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.crypto-label {
+  color: #b6bedc;
+  font-size: 20px;
+  margin-bottom: 12px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.crypto-select {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: none;
+  background: #10162b;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 32px;
+  outline: none;
+}
+
+.crypto-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.crypto-box {
+  flex: 1;
+  background: #10162b;
+  border-radius: 24px;
+  padding: 32px 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.crypto-box-label {
+  color: #b6bedc;
+  font-size: 18px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.crypto-price {
+  color: #fff;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.crypto-signal {
+  color: #4ade80;
+  background: #052e16;
+  border-radius: 12px;
+  padding: 8px 28px;
+  font-weight: 700;
+  font-size: 28px;
+  min-width: 80px;
+  text-align: center;
+}
+.crypto-signal.sell {
+  color: #f87171;
+  background: #450a0a;
+}
+
+.crypto-refresh {
+  background: linear-gradient(90deg,#3b82f6,#60a5fa);
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 14px 0;
+  box-shadow: 0 2px 16px #3b82f655;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+  width: 100%;
+}
+.crypto-refresh:disabled {
+  background: #64748b;
+  cursor: not-allowed;
+}
+
+.crypto-footer {
+  color: #b6bedc;
+  font-size: 15px;
+  margin-top: 18px;
+  text-align: center;
+}
