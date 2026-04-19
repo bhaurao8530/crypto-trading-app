@@ -15,7 +15,7 @@ function App() {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const res = await fetch(`http://127.0.0.1:8000/signal?coin=${coin}`);
+      const res = await fetch(`https://crypto-trading-app-gdau.onrender.com/signal?coin=${coin}`);
       const json = await res.json();
       setData(json);
       setLoading(false);
