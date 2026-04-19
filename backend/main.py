@@ -36,7 +36,7 @@ def get_price(coin="bitcoin"):
         data = response.json()
 
         if coin not in data or "usd" not in data[coin]:
-            return 0  # fallback value
+            return 0 
 
         price = data[coin]["usd"]
 
